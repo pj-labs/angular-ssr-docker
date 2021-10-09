@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {CookieService} from 'ngx-cookie-service';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,15 +24,12 @@ export class AuthService {
   }
 
   login() {
-    this.cookieService.set('token', this.generateToken())
-  }
-
-  private generateToken() {
-    let dt = new Date().getTime();
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-      let r = (dt + Math.random() * 16) % 16 | 0;
-      dt = Math.floor(dt / 16);
-      return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-    });
+    return this.httpClient.get('http://localhost:3000/login').pipe(map((response: any) => {
+      // login successful if there's a Spring Session token in the response
+      if (response.body ||response.token) {
+        this.cookieService.set('token', response.token);
+      }
+      return response;
+    }));
   }
 }
