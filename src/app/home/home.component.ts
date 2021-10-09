@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../service/auth.service';
 import {CookieService} from 'ngx-cookie-service';
+import {HomeService} from '../service/home.service';
 
 @Component({
   selector: 'app-home',
@@ -9,16 +10,25 @@ import {CookieService} from 'ngx-cookie-service';
 })
 export class HomeComponent implements OnInit {
   token: string | undefined;
+  userDisplayName: string | undefined;
 
   constructor(private authService: AuthService,
+              private homeService: HomeService,
               private cookieService: CookieService) {
   }
 
   ngOnInit(): void {
     this.token = this.cookieService.get('token');
+    this.getUserInfo();
   }
 
   logout() {
     this.authService.logout();
+  }
+
+  private getUserInfo() {
+    this.homeService.getUserInfo().subscribe(data => {
+      this.userDisplayName = data.firstName + ' ' + data.lastName
+    })
   }
 }
