@@ -3,9 +3,9 @@
 ### How to run?
 1. Clone the project 
 2. Start JSON server
-  ```shell
-  json-server --watch db.json
-  ```
+    ```shell
+    json-server --watch db.json
+    ```
 3. Run using the application
 
    ```
