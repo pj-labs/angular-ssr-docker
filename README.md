@@ -31,3 +31,4 @@
     ```shell
     docker run -p 4000:4000 angular_ssr_docker
     ```
+4. Go to http://localhost:4000 to browse the application
