@@ -6,4 +6,4 @@ FROM node:14-slim
 COPY . .
 
 ## Start the application
-CMD ["node", "dist/pdts/server/main.js"]
+CMD ["node", "dist/angular-ssr-docker/server/main.js"]

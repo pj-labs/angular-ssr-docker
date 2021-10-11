@@ -1,5 +1,5 @@
 {
-  "name": "ssr-test",
+  "name": "angular-ssr-docker",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run ssr-test:serve-ssr",
-    "serve:ssr": "node dist/ssr-test/server/main.js",
-    "build:ssr": "ng build && ng run ssr-test:server",
-    "prerender": "ng run ssr-test:prerender"
+    "dev:ssr": "ng run angular-ssr-docker:serve-ssr",
+    "serve:ssr": "node dist/angular-ssr-docker/server/main.js",
+    "build:ssr": "ng build && ng run angular-ssr-docker:server",
+    "prerender": "ng run angular-ssr-docker:prerender"
   },
   "private": true,
   "dependencies": {

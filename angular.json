@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ssr-test": {
+    "angular-ssr-docker": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ssr-test/browser",
+            "outputPath": "dist/angular-ssr-docker/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -76,10 +76,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ssr-test:build:production"
+              "browserTarget": "angular-ssr-docker:build:production"
             },
             "development": {
-              "browserTarget": "ssr-test:build:development"
+              "browserTarget": "angular-ssr-docker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ssr-test:build"
+            "browserTarget": "angular-ssr-docker:build"
           }
         },
         "test": {
@@ -112,7 +112,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/ssr-test/server",
+            "outputPath": "dist/angular-ssr-docker/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -139,12 +139,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "ssr-test:build:development",
-              "serverTarget": "ssr-test:server:development"
+              "browserTarget": "angular-ssr-docker:build:development",
+              "serverTarget": "angular-ssr-docker:server:development"
             },
             "production": {
-              "browserTarget": "ssr-test:build:production",
-              "serverTarget": "ssr-test:server:production"
+              "browserTarget": "angular-ssr-docker:build:production",
+              "serverTarget": "angular-ssr-docker:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -158,12 +158,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "ssr-test:build:production",
-              "serverTarget": "ssr-test:server:production"
+              "browserTarget": "angular-ssr-docker:build:production",
+              "serverTarget": "angular-ssr-docker:server:production"
             },
             "development": {
-              "browserTarget": "ssr-test:build:development",
-              "serverTarget": "ssr-test:server:development"
+              "browserTarget": "angular-ssr-docker:build:development",
+              "serverTarget": "angular-ssr-docker:server:development"
             }
           },
           "defaultConfiguration": "production"
@@ -171,5 +171,5 @@
       }
     }
   },
-  "defaultProject": "ssr-test"
+  "defaultProject": "angular-ssr-docker"
 }
