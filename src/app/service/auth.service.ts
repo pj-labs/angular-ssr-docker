@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
-import {CookieService} from 'ngx-cookie-service';
 import {map} from 'rxjs/operators';
+import {CookieService} from 'ngx-cookie';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +15,11 @@ export class AuthService {
   }
 
   public isUserLoggedIn(): boolean {
-    return this.cookieService.check("token");
+    return this.cookieService.hasKey("token");
   }
 
   logout() {
-    this.cookieService.delete("token");
+    this.cookieService.remove("token");
     this.router.navigate(['login'])
   }
 
@@ -27,7 +27,7 @@ export class AuthService {
     return this.httpClient.get('http://localhost:3000/login').pipe(map((response: any) => {
       // login successful if there's a Spring Session token in the response
       if (response.body ||response.token) {
-        this.cookieService.set('token', response.token);
+        this.cookieService.put('token', response.token);
       }
       return response;
     }));
