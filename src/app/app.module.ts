@@ -11,7 +11,6 @@ import {MatInputModule} from '@angular/material/input';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
-import {CookieModule} from 'ngx-cookie';
 
 @NgModule({
   declarations: [
@@ -27,8 +26,7 @@ import {CookieModule} from 'ngx-cookie';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatButtonModule,
-    CookieModule.forRoot()
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
