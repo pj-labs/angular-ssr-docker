@@ -12,6 +12,7 @@
    ```
    npm run dev:ssr
    ```
+4. Go to http://localhost:4200 to browse the application
 
 ### Deploy with docker
 
