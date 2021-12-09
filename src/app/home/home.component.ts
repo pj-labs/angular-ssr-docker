@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../service/auth.service';
-import {CookieService} from 'ngx-cookie-service';
 import {HomeService} from '../service/home.service';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-home',
