@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../service/auth.service';
 import {HomeService} from '../service/home.service';
-import {CookieService} from 'ngx-cookie-service';
+import {SsrCookieService} from 'ngx-cookie-service-ssr';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private authService: AuthService,
               private homeService: HomeService,
-              private cookieService: CookieService) {
+              private cookieService: SsrCookieService) {
   }
 
   ngOnInit(): void {
