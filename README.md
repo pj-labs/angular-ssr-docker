@@ -18,7 +18,7 @@
 
 1. Build the application, use `sudo` if necessary
     ```shell
-      ng build --configuration=dev && ng run pdts:server
+      ng build && ng run angular-ssr-docker:server
     ```
 
 2. Build Docker images
