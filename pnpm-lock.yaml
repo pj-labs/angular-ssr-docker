@@ -35,14 +35,14 @@ dependencies:
     specifier: ^16.0.0-next.7
     version: 16.0.0-next.7(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@angular/platform-browser@16.0.0-next.7)(rxjs@7.8.0)
   '@nguniversal/express-engine':
-    specifier: ^15.0.0
-    version: 15.0.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@angular/platform-server@16.0.0-next.7)(express@4.18.2)
+    specifier: ^16.0.0-next.0
+    version: 16.0.0-next.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(express@4.18.2)
   express:
     specifier: ^4.18.2
     version: 4.18.2
   ngx-cookie-service-ssr:
     specifier: ^15.0.0
-    version: 15.0.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@nguniversal/express-engine@15.0.0)
+    version: 15.0.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@nguniversal/express-engine@16.0.0-next.0)
   rxjs:
     specifier: ~7.8.0
     version: 7.8.0
@@ -64,8 +64,8 @@ devDependencies:
     specifier: ^16.0.0-next.7
     version: 16.0.0-next.7(@angular/compiler@16.0.0-next.7)(typescript@5.0.4)
   '@nguniversal/builders':
-    specifier: ^15.0.0
-    version: 15.0.0(@angular-devkit/build-angular@16.0.0-next.7)(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@types/express@4.17.15)(typescript@5.0.4)
+    specifier: ^16.0.0-next.0
+    version: 16.0.0-next.0(@angular-devkit/build-angular@16.0.0-next.7)(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@types/express@4.17.15)(typescript@5.0.4)
   '@types/express':
     specifier: ^4.17.0
     version: 4.17.15
@@ -84,16 +84,6 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
-    dev: true
-
-  /@angular-devkit/architect@0.1500.4:
-    resolution: {integrity: sha512-U9RQueICmmNk9c2zQjUN8qi/+H6kO2VKqeyuh3Vwj6yj4lQEINf1SNX8Ba9UFH/rxNo64iFM0k5x5vX0VajvCw==}
-    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
-    dependencies:
-      '@angular-devkit/core': 15.0.4
-      rxjs: 6.6.7
-    transitivePeerDependencies:
-      - chokidar
     dev: true
 
   /@angular-devkit/architect@0.1600.0-next.7(chokidar@3.5.3):
@@ -234,22 +224,6 @@ packages:
       webpack-dev-server: 4.13.2(webpack@5.77.0)
     transitivePeerDependencies:
       - chokidar
-    dev: true
-
-  /@angular-devkit/core@15.0.4:
-    resolution: {integrity: sha512-4ITpRAevd652SxB+qNesIQ9qfbm7wT5UBU5kJOPPwGL77I21g8CQpkmV1n5VSacPvC9Zbz90feOWexf7w7JzcA==}
-    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
-    peerDependencies:
-      chokidar: ^3.5.2
-    peerDependenciesMeta:
-      chokidar:
-        optional: true
-    dependencies:
-      ajv: 8.11.0
-      ajv-formats: 2.1.1(ajv@8.11.0)
-      jsonc-parser: 3.2.0
-      rxjs: 6.6.7
-      source-map: 0.7.4
     dev: true
 
   /@angular-devkit/core@16.0.0-next.7(chokidar@3.5.3):
@@ -2741,16 +2715,16 @@ packages:
       webpack: 5.77.0(esbuild@0.17.15)
     dev: true
 
-  /@nguniversal/builders@15.0.0(@angular-devkit/build-angular@16.0.0-next.7)(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@types/express@4.17.15)(typescript@5.0.4):
-    resolution: {integrity: sha512-MEgKIhbbut933InHhogoNKSZXh7NigPIWHBFk7P7tSOfdu55nuO4WlR5lcTC7KbkqMmQOAtJP54XLdKS7hhFxg==}
-    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
+  /@nguniversal/builders@16.0.0-next.0(@angular-devkit/build-angular@16.0.0-next.7)(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@types/express@4.17.15)(typescript@5.0.4):
+    resolution: {integrity: sha512-44vb2BXfm57edCnCvcnbXf8iYN/tS2SlhkNOHxiRLnl9OlsUrAlt9/GmxP406q3Y/G1N5bTuEVHNn8JM/t77zA==}
+    engines: {node: ^16.13.0 || >=18.10.0}
     peerDependencies:
-      '@angular-devkit/build-angular': ^15.0.0-next.0
+      '@angular-devkit/build-angular': ^16.0.0 || ^16.0.0-next.0
     dependencies:
-      '@angular-devkit/architect': 0.1500.4
+      '@angular-devkit/architect': 0.1600.0-next.7(chokidar@3.5.3)
       '@angular-devkit/build-angular': 16.0.0-next.7(@angular/compiler-cli@16.0.0-next.7)(@angular/platform-server@16.0.0-next.7)(@types/node@18.11.18)(ts-node@10.9.1)(typescript@5.0.4)
-      '@angular-devkit/core': 15.0.4
-      '@nguniversal/common': 15.0.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)
+      '@angular-devkit/core': 16.0.0-next.7(chokidar@3.5.3)
+      '@nguniversal/common': 16.0.0-next.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)
       browser-sync: 2.27.11
       express: 4.18.2
       guess-parser: 0.4.22(typescript@5.0.4)
@@ -2772,17 +2746,17 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@nguniversal/common@15.0.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7):
-    resolution: {integrity: sha512-RSlCSS5HejFoH/T6hpRIkTG1JzYEIxRgxsSxVyyPhGGRS4ouBzy4vEVkuIKwiYgVMBIGljJLelb38IsChTJsRg==}
-    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
+  /@nguniversal/common@16.0.0-next.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7):
+    resolution: {integrity: sha512-jgy7kTyok+kT0PJ5q8f40QPqaLjpH6mTRRuX2shQmBoJGPDXofu+xd6cSbC1t9L45MM/GuPmAiwSP8ckMAF5LQ==}
+    engines: {node: ^16.13.0 || >=18.10.0}
     peerDependencies:
-      '@angular/common': ^15.0.0-next.0
-      '@angular/core': ^15.0.0-next.0
+      '@angular/common': ^16.0.0 || ^16.0.0-next.0
+      '@angular/core': ^16.0.0 || ^16.0.0-next.0
     dependencies:
       '@angular/common': 16.0.0-next.7(@angular/core@16.0.0-next.7)(rxjs@7.8.0)
       '@angular/core': 16.0.0-next.7(rxjs@7.8.0)(zone.js@0.13.0)
       critters: 0.0.16
-      jsdom: 20.0.2
+      jsdom: 21.1.1
       tslib: 2.5.0
     transitivePeerDependencies:
       - bufferutil
@@ -2790,21 +2764,19 @@ packages:
       - supports-color
       - utf-8-validate
 
-  /@nguniversal/express-engine@15.0.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@angular/platform-server@16.0.0-next.7)(express@4.18.2):
-    resolution: {integrity: sha512-tWk2/oMTQo703VsTGpHakm+2BH1bXQbmD43BcYUcmASJDIDmxSBCEY6zwT1TjrYST0keBChJD9jAoKesvSPB/w==}
-    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
+  /@nguniversal/express-engine@16.0.0-next.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(express@4.18.2):
+    resolution: {integrity: sha512-tFC4Vq/oKW6UVOeNyHRH7koYwEaMM9FbMZAqhRwFkVzQPfixAlxxvkj/AiPpV6+CoHYUum5MLtNiVkhTIlh8uw==}
+    engines: {node: ^16.13.0 || >=18.10.0}
     peerDependencies:
-      '@angular/common': ^15.0.0-next.0
-      '@angular/core': ^15.0.0-next.0
-      '@angular/platform-server': ^15.0.0-next.0
+      '@angular/common': ^16.0.0 || ^16.0.0-next.0
+      '@angular/core': ^16.0.0 || ^16.0.0-next.0
       express: ^4.15.2
     dependencies:
       '@angular/common': 16.0.0-next.7(@angular/core@16.0.0-next.7)(rxjs@7.8.0)
       '@angular/core': 16.0.0-next.7(rxjs@7.8.0)(zone.js@0.13.0)
-      '@angular/platform-server': 16.0.0-next.7(@angular/animations@16.0.0-next.7)(@angular/common@16.0.0-next.7)(@angular/compiler@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@angular/platform-browser-dynamic@16.0.0-next.7)(@angular/platform-browser@16.0.0-next.7)
-      '@nguniversal/common': 15.0.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)
+      '@nguniversal/common': 16.0.0-next.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)
       express: 4.18.2
-      tslib: 2.4.1
+      tslib: 2.5.0
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -3263,7 +3235,7 @@ packages:
   /acorn-globals@7.0.1:
     resolution: {integrity: sha512-umOSDSDrfHbTNPuNpC2NSnnA3LUrqpevPb4T9jRx4MagXNS0rs+gwiTcAvqCRmsD6utzsrzNt+ebm00SNWiC3Q==}
     dependencies:
-      acorn: 8.8.1
+      acorn: 8.8.2
       acorn-walk: 8.2.0
 
   /acorn-import-assertions@1.8.0(acorn@8.8.1):
@@ -3291,6 +3263,12 @@ packages:
 
   /acorn@8.8.1:
     resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true
+
+  /acorn@8.8.2:
+    resolution: {integrity: sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -3329,17 +3307,6 @@ packages:
       indent-string: 4.0.0
     dev: true
 
-  /ajv-formats@2.1.1(ajv@8.11.0):
-    resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
-    peerDependencies:
-      ajv: ^8.0.0
-    peerDependenciesMeta:
-      ajv:
-        optional: true
-    dependencies:
-      ajv: 8.11.0
-    dev: true
-
   /ajv-formats@2.1.1(ajv@8.12.0):
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
     peerDependencies:
@@ -3374,15 +3341,6 @@ packages:
       fast-deep-equal: 3.1.3
       fast-json-stable-stringify: 2.1.0
       json-schema-traverse: 0.4.1
-      uri-js: 4.4.1
-    dev: true
-
-  /ajv@8.11.0:
-    resolution: {integrity: sha512-wGgprdCvMalC0BztXvitD2hC04YffAvtsUn93JbGXYLAtCUO4xd17mCCZQxUOItiBwZvJScWo8NIvQMQ71rdpg==}
-    dependencies:
-      fast-deep-equal: 3.1.3
-      json-schema-traverse: 1.0.0
-      require-from-string: 2.0.2
       uri-js: 4.4.1
     dev: true
 
@@ -4205,19 +4163,24 @@ packages:
 
   /cssom@0.3.8:
     resolution: {integrity: sha512-b0tGHbfegbhPJpxpiBPU2sCkigAqtM9O121le6bbOlgyV+NyGyCmVfJ6QW9eRjz8CpNfWEOYBIMIGRYkLwsIYg==}
+    dev: true
 
   /cssom@0.4.4:
     resolution: {integrity: sha512-p3pvU7r1MyyqbTk+WbNJIgJjG2VmTIaB10rI93LzVPrmDJKkzKYMtxxyAvQXR/NS6otuzveI7+7BBq3SjBS2mw==}
     dev: true
-
-  /cssom@0.5.0:
-    resolution: {integrity: sha512-iKuQcq+NdHqlAcwUY0o/HL69XQrUaQdMjmStJ8JFmUaiiQErlhrmuigkg/CU4E2J0IyUKUrMAgl36TvN67MqTw==}
 
   /cssstyle@2.3.0:
     resolution: {integrity: sha512-AZL67abkUzIuvcHqk7c09cezpGNcxUxU4Ioi/05xHk4DQeTkWmGYftIE6ctU6AEt+Gn4n1lDStOtj7FKycP71A==}
     engines: {node: '>=8'}
     dependencies:
       cssom: 0.3.8
+    dev: true
+
+  /cssstyle@3.0.0:
+    resolution: {integrity: sha512-N4u2ABATi3Qplzf0hWbVCdjenim8F3ojEXpBDF5hBpjzW182MjNGLqfmQ0SkSPeQ+V86ZXgeH8aXj6kayd4jgg==}
+    engines: {node: '>=14'}
+    dependencies:
+      rrweb-cssom: 0.6.0
 
   /data-urls@2.0.0:
     resolution: {integrity: sha512-X5eWTSXO/BJmpdIKCRuKUgSCgAN0OwliVK3yPKbwIWU1Tdw5BRajxlzMidvh+gwko9AfQ9zIj52pzF91Q3YAvQ==}
@@ -4228,13 +4191,13 @@ packages:
       whatwg-url: 8.7.0
     dev: true
 
-  /data-urls@3.0.2:
-    resolution: {integrity: sha512-Jy/tj3ldjZJo63sVAvg6LHt2mHvl4V6AgRAmNDtLdm7faqtsx+aJG42rsyCo9JCoRVKwPFzKlIPx3DIibwSIaQ==}
-    engines: {node: '>=12'}
+  /data-urls@4.0.0:
+    resolution: {integrity: sha512-/mMTei/JXPqvFqQtfyTowxmJVwr2PVAeCcDxyFf6LhoOu/09TX2OX3kb2wzi4DMXcfj4OItwDOnhl5oziPnT6g==}
+    engines: {node: '>=14'}
     dependencies:
       abab: 2.0.6
       whatwg-mimetype: 3.0.0
-      whatwg-url: 11.0.0
+      whatwg-url: 12.0.1
 
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -5473,7 +5436,7 @@ packages:
         optional: true
     dependencies:
       abab: 2.0.6
-      acorn: 8.8.1
+      acorn: 8.8.2
       acorn-globals: 6.0.0
       cssom: 0.4.4
       cssstyle: 2.3.0
@@ -5505,8 +5468,8 @@ packages:
       - utf-8-validate
     dev: true
 
-  /jsdom@20.0.2:
-    resolution: {integrity: sha512-AHWa+QO/cgRg4N+DsmHg1Y7xnz+8KU3EflM0LVDTdmrYOc1WWTSkOjtpUveQH+1Bqd5rtcVnb/DuxV/UjDO4rA==}
+  /jsdom@21.1.1:
+    resolution: {integrity: sha512-Jjgdmw48RKcdAIQyUD1UdBh2ecH7VqwaXPN3ehoZN6MqgVbMn+lRm1aAT1AsdJRAJpwfa4IpwgzySn61h2qu3w==}
     engines: {node: '>=14'}
     peerDependencies:
       canvas: ^2.5.0
@@ -5515,11 +5478,10 @@ packages:
         optional: true
     dependencies:
       abab: 2.0.6
-      acorn: 8.8.1
+      acorn: 8.8.2
       acorn-globals: 7.0.1
-      cssom: 0.5.0
-      cssstyle: 2.3.0
-      data-urls: 3.0.2
+      cssstyle: 3.0.0
+      data-urls: 4.0.0
       decimal.js: 10.4.3
       domexception: 4.0.0
       escodegen: 2.0.0
@@ -5530,15 +5492,16 @@ packages:
       is-potential-custom-element-name: 1.0.1
       nwsapi: 2.2.2
       parse5: 7.1.2
+      rrweb-cssom: 0.6.0
       saxes: 6.0.0
       symbol-tree: 3.2.4
       tough-cookie: 4.1.2
-      w3c-xmlserializer: 3.0.0
+      w3c-xmlserializer: 4.0.0
       webidl-conversions: 7.0.0
       whatwg-encoding: 2.0.0
       whatwg-mimetype: 3.0.0
-      whatwg-url: 11.0.0
-      ws: 8.11.0
+      whatwg-url: 12.0.1
+      ws: 8.13.0
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -6069,7 +6032,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /ngx-cookie-service-ssr@15.0.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@nguniversal/express-engine@15.0.0):
+  /ngx-cookie-service-ssr@15.0.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@nguniversal/express-engine@16.0.0-next.0):
     resolution: {integrity: sha512-zgeNOg+31nhZ7Z63dOC+oLnSHLsnX8ws+mLz6zFl4N3/jf3c9ELKgDAZReEvO2eQi88YXTZz2069/Q0LQo4G8g==}
     peerDependencies:
       '@angular/common': ^15.0.0
@@ -6078,7 +6041,7 @@ packages:
     dependencies:
       '@angular/common': 16.0.0-next.7(@angular/core@16.0.0-next.7)(rxjs@7.8.0)
       '@angular/core': 16.0.0-next.7(rxjs@7.8.0)(zone.js@0.13.0)
-      '@nguniversal/express-engine': 15.0.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(@angular/platform-server@16.0.0-next.7)(express@4.18.2)
+      '@nguniversal/express-engine': 16.0.0-next.0(@angular/common@16.0.0-next.7)(@angular/core@16.0.0-next.7)(express@4.18.2)
       tslib: 2.4.1
     dev: false
 
@@ -6671,6 +6634,10 @@ packages:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
     engines: {node: '>=6'}
 
+  /punycode@2.3.0:
+    resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
+    engines: {node: '>=6'}
+
   /qs@6.11.0:
     resolution: {integrity: sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==}
     engines: {node: '>=0.6'}
@@ -6891,6 +6858,9 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /rrweb-cssom@0.6.0:
+    resolution: {integrity: sha512-APM0Gt1KoXBz0iIkkdB/kfvGOwC4UuJFeG/c+yV7wSc7q96cG/kJ0HiYCnzivD9SB53cLV1MlHFNfOuPaadYSw==}
 
   /run-async@2.4.1:
     resolution: {integrity: sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==}
@@ -7596,14 +7566,14 @@ packages:
     resolution: {integrity: sha512-15Ih7phfcdP5YxqiB+iDtLoaTz4Nd35+IiAv0kQ5FNKHzXgdWqPoTIqEDDJmXceQt4JZk6lVPT8lnDlPpGDppw==}
     engines: {node: '>=8'}
     dependencies:
-      punycode: 2.1.1
+      punycode: 2.3.0
     dev: true
 
-  /tr46@3.0.0:
-    resolution: {integrity: sha512-l7FvfAHlcmulp8kr+flpQZmVwtu7nfRV7NZujtN0OqES8EL4O4e0qqzL0DC5gAvx/ZC/9lk6rhcUwYvkBnBnYA==}
-    engines: {node: '>=12'}
+  /tr46@4.1.1:
+    resolution: {integrity: sha512-2lv/66T7e5yNyhAAC4NaKe5nVavzuGJQVVtRYLyQ2OI8tsJ61PMLlelehb0wi2Hx6+hT/OJUWZcw8MjlSRnxvw==}
+    engines: {node: '>=14'}
     dependencies:
-      punycode: 2.1.1
+      punycode: 2.3.0
 
   /tree-kill@1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
@@ -7630,7 +7600,7 @@ packages:
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
       '@types/node': 18.11.18
-      acorn: 8.8.1
+      acorn: 8.8.2
       acorn-walk: 8.2.0
       arg: 4.1.3
       create-require: 1.1.1
@@ -7873,9 +7843,9 @@ packages:
       xml-name-validator: 3.0.0
     dev: true
 
-  /w3c-xmlserializer@3.0.0:
-    resolution: {integrity: sha512-3WFqGEgSXIyGhOmAFtlicJNMjEps8b1MG31NCA0/vOF9+nKMUW1ckhi9cnNHmf88Rzw5V+dwIwsm2C7X8k9aQg==}
-    engines: {node: '>=12'}
+  /w3c-xmlserializer@4.0.0:
+    resolution: {integrity: sha512-d+BFHzbiCx6zGfz0HyQ6Rg69w9k19nviJspaj4yNscGjrHu94sVP+aRm75yEbCh+r2/yR+7q6hux9LVtbuTGBw==}
+    engines: {node: '>=14'}
     dependencies:
       xml-name-validator: 4.0.0
 
@@ -8096,11 +8066,11 @@ packages:
     resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
     engines: {node: '>=12'}
 
-  /whatwg-url@11.0.0:
-    resolution: {integrity: sha512-RKT8HExMpoYx4igMiVMY83lN6UeITKJlBQ+vR/8ZJ8OCdSiN3RwCq+9gH0+Xzj0+5IrM6i4j/6LuvzbZIQgEcQ==}
-    engines: {node: '>=12'}
+  /whatwg-url@12.0.1:
+    resolution: {integrity: sha512-Ed/LrqB8EPlGxjS+TrsXcpUond1mhccS3pchLhzSgPCnTimUCKj3IZE75pAs5m6heB2U2TMerKFUXheyHY+VDQ==}
+    engines: {node: '>=14'}
     dependencies:
-      tr46: 3.0.0
+      tr46: 4.1.1
       webidl-conversions: 7.0.0
 
   /whatwg-url@8.7.0:
@@ -8168,18 +8138,6 @@ packages:
         optional: true
     dev: true
 
-  /ws@8.11.0:
-    resolution: {integrity: sha512-HPG3wQd9sNQoT9xHyNCXoDUa+Xw/VevmY9FoHyQ+g+rrMn4j6FB4np7Z0OhdTgjx6MgQLK7jwSy1YecU1+4Asg==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: ^5.0.2
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-
   /ws@8.13.0:
     resolution: {integrity: sha512-x9vcZYTrFPC7aSIbj7sRCYo7L/Xb8Iy+pW0ng0wt2vCJv7M9HOMy0UoN3rr+IFC7hb7vXoqS+P9ktyLLLhO+LA==}
     engines: {node: '>=10.0.0'}
@@ -8191,7 +8149,6 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
-    dev: true
 
   /ws@8.2.3:
     resolution: {integrity: sha512-wBuoj1BDpC6ZQ1B7DWQBYVLphPWkm8i9Y0/3YdHjHKHiohOJ1ws+3OccDWtH+PoC9DZD5WOTrJvNbWvjS6JWaA==}
