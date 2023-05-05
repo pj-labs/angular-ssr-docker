@@ -2,11 +2,15 @@ import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../service/auth.service';
 import {HomeService} from '../service/home.service';
 import {SsrCookieService} from 'ngx-cookie-service-ssr';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  standalone: true,
+  imports: [
+    MatButtonModule
+  ]
 })
 export class HomeComponent implements OnInit {
   token: string | undefined;

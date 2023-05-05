@@ -1,12 +1,15 @@
 import {Component, OnInit} from '@angular/core';
-import {UntypedFormBuilder, Validators} from '@angular/forms';
+import {ReactiveFormsModule, UntypedFormBuilder, Validators} from '@angular/forms';
 import {AuthService} from '../service/auth.service';
 import {Router} from '@angular/router';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  standalone: true,
+  imports: [ReactiveFormsModule, MatInputModule, MatButtonModule]
 })
 export class LoginComponent implements OnInit {
 
