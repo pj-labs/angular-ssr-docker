@@ -4,7 +4,7 @@ import {AppComponent} from './app/app.component';
 import {provideAnimations} from '@angular/platform-browser/animations';
 import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
 import {AppRoutingModule} from './app/app-routing.module';
-import {bootstrapApplication, BrowserModule, provideClientHydration} from '@angular/platform-browser';
+import {bootstrapApplication, BrowserModule} from '@angular/platform-browser';
 
 if (environment.production) {
   enableProdMode();
@@ -12,10 +12,9 @@ if (environment.production) {
 
 document.addEventListener('DOMContentLoaded', () => {
   bootstrapApplication(AppComponent, {
-    providers: [
-      importProvidersFrom(BrowserModule.withServerTransition({appId: 'serverApp'}),
-        AppRoutingModule),
-      provideClientHydration(), provideHttpClient(withInterceptorsFromDi()), provideAnimations()]
+    providers: [importProvidersFrom(BrowserModule.withServerTransition({appId: 'serverApp'}),
+      AppRoutingModule),
+      provideHttpClient(withInterceptorsFromDi()), provideAnimations()]
   })
     .catch(err => console.error(err));
 });
