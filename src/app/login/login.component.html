@@ -1,17 +1,16 @@
 <div style="display: flex; margin: 20px">
-  <form (ngSubmit)="loginUser()" [formGroup]="loginFormGroup" style="margin-left: auto; margin-right: auto">
-    <mat-form-field appearance="fill" class="example-full-width">
-      <mat-label>Username</mat-label>
-      <input formControlName="username" matInput placeholder="Enter Username">
-    </mat-form-field>
+	<form (ngSubmit)="loginUser()" [formGroup]="loginFormGroup" style="margin-left: auto; margin-right: auto">
+		<mat-form-field appearance="fill" class="example-full-width">
+			<mat-label>Username</mat-label>
+			<input formControlName="username" matInput placeholder="Enter Username" />
+		</mat-form-field>
 
-    <br/>
-    <mat-form-field appearance="fill" class="example-full-width">
-      <mat-label>Password</mat-label>
-      <input formControlName="password" matInput placeholder="Enter Password"/>
-    </mat-form-field>
-    <br/>
-    <button color="primary" mat-raised-button type="submit">Login
-    </button>
-  </form>
+		<br />
+		<mat-form-field appearance="fill" class="example-full-width">
+			<mat-label>Password</mat-label>
+			<input formControlName="password" matInput placeholder="Enter Password" />
+		</mat-form-field>
+		<br />
+		<button color="primary" mat-raised-button type="submit">Login</button>
+	</form>
 </div>
