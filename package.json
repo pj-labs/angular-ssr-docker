@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --hmr --watch",
-    "build": "ng build",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run angular-ssr-docker:serve-ssr",
-    "serve:ssr": "node dist/angular-ssr-docker/server/main.js",
+    "serve:ssr": "node dist/angular-ssr-docker/server/server.mjs ",
     "build:ssr": "ng build && ng run angular-ssr-docker:server",
     "prerender": "ng run angular-ssr-docker:prerender"
   },
