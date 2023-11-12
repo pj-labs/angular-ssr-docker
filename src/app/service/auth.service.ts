@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { SsrCookieService } from 'ngx-cookie-service-ssr';
+import { API_BASE_URL } from '../constants/app.constants';
 
 @Injectable({
 	providedIn: 'root',
@@ -24,7 +25,7 @@ export class AuthService {
 	}
 
 	login() {
-		return this.httpClient.get('http://localhost:3000/login').pipe(
+		return this.httpClient.get(`${API_BASE_URL}/login`).pipe(
 			map((response: any) => {
 				// login successful if there's a Spring Session token in the response
 				if (response.body || response.token) {
