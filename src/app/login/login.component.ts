@@ -4,12 +4,13 @@ import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
 	selector: 'app-login',
 	templateUrl: './login.component.html',
 	standalone: true,
-	imports: [ReactiveFormsModule, MatInputModule, MatButtonModule],
+	imports: [ReactiveFormsModule, MatInputModule, MatButtonModule, MatFormFieldModule],
 })
 export class LoginComponent implements OnInit {
 	loginFormGroup = this.fb.group({
