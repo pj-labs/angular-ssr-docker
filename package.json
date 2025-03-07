@@ -3,7 +3,7 @@
   "version": "17.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --watch --hmr --ssl=true --ssl-cert ~/localhost.pem --ssl-key ~/localhost-key.pem",
+    "start": "ng serve --watch --hmr",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
