@@ -70,7 +70,7 @@ importers:
         specifier: ^19.2.1
         version: 19.2.1(@angular/compiler@19.2.1(@angular/core@19.2.1(rxjs@7.8.2)(zone.js@0.15.0)))(typescript@5.8.2)
       '@types/express':
-        specifier: ^4.17.21
+        specifier: ^4.17.17
         version: 4.17.21
       '@types/node':
         specifier: ^22.13.9

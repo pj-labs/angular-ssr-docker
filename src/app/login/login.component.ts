@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ReactiveFormsModule, UntypedFormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../service/auth.service';
 import { Router } from '@angular/router';
@@ -13,16 +13,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 	imports: [ReactiveFormsModule, MatInputModule, MatButtonModule, MatFormFieldModule],
 })
 export class LoginComponent implements OnInit {
+	fb = inject(UntypedFormBuilder);
+	router = inject(Router);
+	authService = inject(AuthService);
 	loginFormGroup = this.fb.group({
 		username: ['admin', Validators.required],
 		password: ['admin', Validators.required],
 	});
-
-	constructor(
-		private fb: UntypedFormBuilder,
-		private router: Router,
-		private authService: AuthService,
-	) {}
 
 	ngOnInit(): void {}
 

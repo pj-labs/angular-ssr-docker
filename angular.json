@@ -5,7 +5,11 @@
 	"projects": {
 		"angular-ssr-docker": {
 			"projectType": "application",
-			"schematics": {},
+			"schematics": {
+				"@schematics/angular:component": {
+					"style": "scss"
+				}
+			},
 			"root": "",
 			"sourceRoot": "src",
 			"prefix": "app",
@@ -20,9 +24,12 @@
 							"zone.js"
 						],
 						"tsConfig": "tsconfig.app.json",
+						"inlineStyleLanguage": "scss",
 						"assets": [
-							"src/favicon.ico",
-							"src/assets"
+							{
+								"glob": "**/*",
+								"input": "public"
+							}
 						],
 						"styles": [
 							"src/styles.scss"
@@ -31,7 +38,7 @@
 						"server": "src/main.server.ts",
 						"prerender": true,
 						"ssr": {
-							"entry": "server.ts"
+							"entry": "src/server.ts"
 						}
 					},
 					"configurations": {
@@ -39,13 +46,13 @@
 							"budgets": [
 								{
 									"type": "initial",
-									"maximumWarning": "500kb",
-									"maximumError": "1mb"
+									"maximumWarning": "500kB",
+									"maximumError": "1MB"
 								},
 								{
 									"type": "anyComponentStyle",
-									"maximumWarning": "2kb",
-									"maximumError": "4kb"
+									"maximumWarning": "4kB",
+									"maximumError": "8kB"
 								}
 							],
 							"outputHashing": "all"
@@ -71,10 +78,7 @@
 					"defaultConfiguration": "development"
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"buildTarget": "angular-ssr-docker:build"
-					}
+					"builder": "@angular-devkit/build-angular:extract-i18n"
 				},
 				"test": {
 					"builder": "@angular-devkit/build-angular:karma",
@@ -84,12 +88,15 @@
 							"zone.js/testing"
 						],
 						"tsConfig": "tsconfig.spec.json",
+						"inlineStyleLanguage": "scss",
 						"assets": [
-							"src/favicon.ico",
-							"src/assets"
+							{
+								"glob": "**/*",
+								"input": "public"
+							}
 						],
 						"styles": [
-							"src/styles.css"
+							"src/styles.scss"
 						],
 						"scripts": []
 					}
