@@ -6,7 +6,7 @@
 2. Open a terminal and run the application
 
    ```
-   npm run start
+   pnpm start
    ```
 3. Go to http://localhost:4200 to browse the application
 
@@ -14,7 +14,7 @@
 
 1. Build the application, use `sudo` if necessary
     ```shell
-      npm run build && npm run serve:ssr
+      pnpm build && pnpm serve:ssr
     ```
 
 2. Build Docker images

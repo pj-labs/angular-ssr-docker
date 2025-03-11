@@ -3,11 +3,11 @@
   "version": "17.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --watch --hmr",
+    "start": "ng build && node dist/angular-ssr-docker/server/server.mjs",
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angular-ssr-docker": "node dist/angular-ssr-docker/server/server.mjs"
+    "serve:ssr": "node dist/angular-ssr-docker/server/server.mjs"
   },
   "private": true,
   "dependencies": {

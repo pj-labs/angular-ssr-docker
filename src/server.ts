@@ -4,6 +4,7 @@ import express from 'express';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import bootstrap from './main.server';
+import { randomUUID } from 'node:crypto';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
@@ -40,6 +41,8 @@ app.get(
  */
 app.get('**', (req, res, next) => {
 	const { protocol, originalUrl, baseUrl, headers } = req;
+	console.log('req?.headers.cookie:', req?.headers.cookie);
+	res.cookie('server-cookie', randomUUID());
 
 	commonEngine
 		.render({
@@ -58,7 +61,7 @@ app.get('**', (req, res, next) => {
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
 if (isMainModule(import.meta.url)) {
-	const port = process.env['PORT'] || 4000;
+	const port = process.env['PORT'] ?? 4000;
 	app.listen(port, () => {
 		console.log(`Node Express server listening on http://localhost:${port}`);
 	});
